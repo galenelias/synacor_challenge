@@ -3,6 +3,7 @@
 *.dll
 a.out
 a.out.dSYM
+saves/
 
 #Ignore stupid Mac OS files
 .DS_Store

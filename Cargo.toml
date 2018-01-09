@@ -5,6 +5,7 @@ authors = ["Galen Elias <gelias@gmail.com>"]
 
 [dependencies]
 clap = "*"
+data-encoding = "*"
 
 [[bin]]
 name = "synacor"
