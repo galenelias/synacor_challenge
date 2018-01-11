@@ -106,7 +106,7 @@ impl Process {
 			self.pc += 2;
 			// Next instruction is now a 'eq b a <val>' with our expected result.  Extract this result
 			let target_result = self.memory[self.pc as usize + 3];
-			println!("Skipping over expensive function at 0x{:04x}, manually computing result of Foo({},{})={}", self.pc, self.registers[0], self.registers[1], target_result);
+			println!("Skipping over expensive function at 0x{:04x}, manually computing result of super_recursive({},{})={}", self.pc, self.registers[0], self.registers[1], target_result);
 			self.registers[7] = solve_for_register_7(target_result);
 			self.registers[0] = target_result;
 		}
@@ -506,7 +506,6 @@ fn main() {
 		let stdin = io::stdin();
 		let mut handle = stdin.lock();
 
-		while app.run_next_instruction(&mut handle) {
-		}
+		while app.run_next_instruction(&mut handle) { }
 	}
 }
