@@ -471,8 +471,8 @@ fn main() {
 				.required(false)
 				.help("specifies that we should disassemble the binary instead of run it"))
 		.arg(
-			Arg::with_name("compute_reg_7")
-				.short("c")
+			Arg::with_name("recursive")
+				.short("r")
 				.required(false)
 				.help("specifies that we should run the super expensive secret algorithm to find the correct inital value of register 7 to use with the teleporter"))
 		.arg(
@@ -496,7 +496,7 @@ fn main() {
 
 	if matches.is_present("disassemble") {
 		app.dump_disassembly();
-	} else if matches.is_present("compute_reg_7") {
+	} else if matches.is_present("recursive") {
 		let result = solve_for_register_7(6);
 		println!("Register 7 = {}", result);
 	} else if matches.is_present("maze") {

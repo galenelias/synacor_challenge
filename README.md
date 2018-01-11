@@ -1,6 +1,25 @@
-# synacor_challenge
-Repository for solving the Synacor Challenge: https://challenge.synacor.com/
+# Synacor challenge
+Repository for solving the Synacor Challenge in Rust: https://challenge.synacor.com/
 
+Full rust solution of all the parts of the Synacor Challenge.
+
+Command line arguments:
+
+    -d   Dumps the disassembly of the challenge.bin
+    -r   Dedicated solver for challenge 7 
+    -m   Dedicated solver for challenge 8 
+
+Some debug commands:
+
+- ?setverbosity \<verbosity\> - Changes the verbosity level. (level 1 = dumping state before each instruction, level 2 = dumps disassembly of each instruction as it runs)
+
+- ?setregister \<reg> \<value> - Allows you to registers on the fly
+
+- ? save <savename> - Save the current program state to saves/\<savename>
+
+- ? load <savename> - Loads the current program state from saves/\<savename>
+
+Challenge readme file:
 
     == Synacor Challenge ==
 
